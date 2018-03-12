@@ -1,6 +1,6 @@
 # admin-scaffolding demo
 
-> A Vue.js project
+> A Vue.js project for admin based on ztjy-fe/scaffolding
 
 ## Build Setup
 
