@@ -9,7 +9,9 @@
 </template>
 
 <script>
-import { Navbar, Sidebar, AppMain } from '@/views/layout/components'
+import Navbar from '@/views/layout/components/Navbar.vue'
+import Sidebar from '@/views/layout/components/Sidebar/index.vue'
+import AppMain from '@/views/layout/components/AppMain.vue'
 
 export default {
 	name: 'layout',
@@ -22,11 +24,14 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-@import "src/assets/scss/mixin.scss";
 .app-wrapper {
-	@include clearfix;
 	position: relative;
 	height: 100%;
 	width: 100%;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 </style>
