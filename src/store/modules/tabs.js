@@ -2,7 +2,7 @@
 const tabsList = window.sessionStorage.getItem('tabs_list')
 const tabsPathList = window.sessionStorage.getItem('tabs_path_list')
 
-const User = {
+const Tabs = {
 	namespaced: true,
 
 	state: {
@@ -16,6 +16,9 @@ const User = {
 	getters: {
 		getCurrentTab (state) {
 			return state.current
+		},
+		getTabList (state) {
+			return state.list
 		}
 	},
 
@@ -66,4 +69,4 @@ const User = {
 	}
 }
 
-export default User
+export default Tabs

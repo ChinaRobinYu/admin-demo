@@ -2,6 +2,7 @@ import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import store from '../store'
 import Common from '@/utils/common'
+import { USER_TOKEN } from '@/maps/constants'
 const instance = axios.create({
 	timeout: 15000
 })
@@ -9,7 +10,7 @@ const instance = axios.create({
 instance.interceptors.request.use(config => {
 	if (store.getters.token) {
 		// 让每个请求携带自定义token 请根据实际情况自行修改
-		config.headers['X-Token'] = Common.getToken()
+		config.headers['X-Token'] = Common.getCookie(USER_TOKEN)
 	}
 	return config
 }, error => {
@@ -20,9 +21,7 @@ instance.interceptors.request.use(config => {
 // respone拦截器
 instance.interceptors.response.use(
 	response => {
-	/**
-	* returncode为非10000时抛错,可结合自己业务进行修改
-	*/
+		// returncode为非10000时抛错,可结合自己业务进行修改
 		const res = response.data
 		if (res.returncode !== 10000) {
 			Message({
