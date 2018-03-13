@@ -16,7 +16,7 @@ export const loginMock = () => {
 		'returncode': 10000,
 		'message': 'success',
 		'data': {
-			'token': 'admin'
+			'token|2': 'admin'
 		}
 	})
 }
@@ -27,7 +27,7 @@ export const getUserInfoMock = () => {
 		'returncode': 10000,
 		'message': 'success',
 		'data': {
-			'token': 'admin'
+			'token|2': 'admin'
 		}
 	})
 }
