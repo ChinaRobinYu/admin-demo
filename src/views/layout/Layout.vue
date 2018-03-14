@@ -55,7 +55,7 @@ export default {
 			this.logout().then(() => {
 				this.$router.push({ path: '/login' })
 				// 为了重新实例化vue-router对象 避免bug
-				window.location.reload()
+				// window.location.reload()
 			})
 		}
 	}
