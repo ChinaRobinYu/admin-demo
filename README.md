@@ -5,13 +5,17 @@
 ## Build Setup
 
 ``` bash
-# clone
-git clone https://github.com/ztjy-fe/admin-demo.git
+
+# szy-cli install
+npm install -g szy-cli
+
+# szy-cli create
+szy create project-name
 
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8586
 npm run dev
 
 # build for production with minification
