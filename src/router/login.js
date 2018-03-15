@@ -17,27 +17,47 @@ export default [{
 		component: _import('dashboard/index')
 	}]
 }, {
-	path: '/form',
+	path: '/system',
 	component: Layout,
 	icon: 'el-icon-menu',
+	meta: {
+		title: '系统管理'
+	},
 	children: [{
-		path: 'index',
-		name: 'Form',
-		component: _import('form/index'),
+		path: 'auth',
+		name: 'Auth',
+		component: _import('test/index'),
 		meta: {
-			title: '一级菜单一'
+			title: '权限管理'
+		}
+	}, {
+		path: 'role',
+		name: 'Role',
+		component: _import('test/index'),
+		meta: {
+			title: '角色管理'
 		}
 	}]
 }, {
-	path: '/table',
+	path: '/user',
 	component: Layout,
 	icon: 'el-icon-menu',
+	meta: {
+		title: '用户管理'
+	},
 	children: [{
-		path: 'index',
-		name: 'Table',
-		component: _import('form/index'),
+		path: 'baseinfo',
+		name: 'UserInfo',
+		component: _import('test/index'),
 		meta: {
-			title: '一级菜单二'
+			title: '基本信息'
+		}
+	}, {
+		path: 'role',
+		name: 'UserRole',
+		component: _import('test/index'),
+		meta: {
+			title: '角色权限'
 		}
 	}]
 }]
