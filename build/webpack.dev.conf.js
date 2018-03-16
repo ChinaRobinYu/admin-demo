@@ -71,7 +71,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 			filename: 'index.html',
 			template: 'index.html',
 			// 将所有的静态文件都插入到body文件的末尾
-			inject: true
+			inject: true,
+			favicon: path.resolve('favicon.ico')
 		}),
 		// 拷贝静态资源
 		new CopyWebpackPlugin([
