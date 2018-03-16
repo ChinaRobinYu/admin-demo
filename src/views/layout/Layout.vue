@@ -9,9 +9,7 @@
 				</div>
 				<el-dropdown-menu class="user-dropdown" slot="dropdown">
 					<router-link class="inlineBlock" to="/">
-						<el-dropdown-item>
-							首页
-						</el-dropdown-item>
+						<el-dropdown-item>首页</el-dropdown-item>
 					</router-link>
 					<el-dropdown-item divided>
 						<span @click="logoutHandler" style="display:block;">退出</span>
