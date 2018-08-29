@@ -70,7 +70,7 @@ module.exports = {
 		productionGzip: false,
 		// 开启gzip压缩的文件的后缀名称
 		productionGzipExtensions: ['js', 'css'],
-		
+
 		// 如果这个选项是true的话，那么则会在build后，会在浏览器中生成一份bundler报告
 		bundleAnalyzerReport: process.env.npm_config_report
 	}
