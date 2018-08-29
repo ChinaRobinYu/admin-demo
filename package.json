@@ -1,5 +1,5 @@
 {
-	"name": "szywebpack-template",
+	"name": "admin-demo",
 	"version": "1.0.0",
 	"description": "A Vue.js project",
 	"author": "ztjy-fe",
@@ -14,7 +14,6 @@
 		"axios": "^0.18.0",
 		"babel-polyfill": "^6.26.0",
 		"element-ui": "2.0.8",
-		"fundebug-javascript": "^0.3.4",
 		"mockjs": "^1.0.1-beta3",
 		"normalize.css": "7.0.0",
 		"nprogress": "0.2.0",
@@ -80,7 +79,7 @@
 	},
 	"browserslist": [
 		"> 1%",
-		"last 2 versions",
+		"last 10 versions",
 		"not ie <= 8"
 	]
 }
