@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import User from './modules/user'
 import Tabs from './modules/tabs'
-import SideBar from './modules/sideBar'
+import SideBar from './modules/sidebar'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
