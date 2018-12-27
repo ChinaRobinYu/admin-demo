@@ -22,28 +22,28 @@ spinner.start()
 // 首先将整个dist文件夹以及里面的内容删除，以免遗留旧的没用的文件
 // 删除完成后才开始webpack构建打包
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
-    if (err) throw err
-    // 执行webpack构建打包，完成之后在终端输出构建完成的相关信息或者输出报错信息并退出程序
-    webpack(webpackConfig, (err, stats) => {
-        spinner.stop()
-        if (err) throw err
-        process.stdout.write(stats.toString({
-            colors: true,
-            modules: false,
-            children: false, // 使用ts-loader插件时, 设置为true，构建过程中会显示TypeScript errors.
-            chunks: false,
-            chunkModules: false
-        }) + '\n\n')
+	if (err) throw err
+	// 执行webpack构建打包，完成之后在终端输出构建完成的相关信息或者输出报错信息并退出程序
+	webpack(webpackConfig, (err, stats) => {
+		spinner.stop()
+		if (err) throw err
+		process.stdout.write(stats.toString({
+			colors: true,
+			modules: false,
+			children: false, // 使用ts-loader插件时, 设置为true，构建过程中会显示TypeScript errors.
+			chunks: false,
+			chunkModules: false
+		}) + '\n\n')
 
-        if (stats.hasErrors()) {
-            console.log(chalk.red('  Build failed with errors.\n'))
-            process.exit(1)
-        }
+		if (stats.hasErrors()) {
+			console.log(chalk.red('  Build failed with errors.\n'))
+			process.exit(1)
+		}
 
-        console.log(chalk.cyan('  Build complete.\n'))
-        console.log(chalk.yellow(
-            '  Tip: built files are meant to be served over an HTTP server.\n' +
-            '  Opening index.html over file:// won\'t work.\n'
-        ))
-    })
+		console.log(chalk.cyan('  Build complete.\n'))
+		console.log(chalk.yellow(
+			'  Tip: built files are meant to be served over an HTTP server.\n' +
+			'  Opening index.html over file:// won\'t work.\n'
+		))
+	})
 })
